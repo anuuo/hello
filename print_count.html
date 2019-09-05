@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> count button</title>
+	<style>
+		#my_centered_buttons { display: flex; justify-content: center; }
+		#button{
+			background-color : pink;
+			color: black;
+			font-size: 20px;
+		}
+
+		.print{
+			font-size: 25px;
+			font-family: "times roman";
+		}
+	</style>
+</head>
+<body>
+	<div id ="my_centered_buttons">
+		<input type="button" id="button" value="-" onclick="minus()">
+		<input type="text" style="text-align: center; font-size: 16px" size="9" value="0" id="count">
+		<input type="button" id="button" value="+" onclick="plus()">
+	</div>
+	<br><br>
+	<script>
+		var count = 0;
+		var count1 =  document.getElementById("count");
+		function plus(){
+			count ++;
+			count1.value = count; 
+		}
+		function minus(){
+			count --;
+			count1.value = count; 
+		}
+	</script>
+
+	<div id="my_centered_buttons">
+		<input type="text" id="myText">
+		<button id= "button" onclick="Print()">send</button>
+		<br>
+	</div>
+
+     <p id="demo" style="text-align: center" class="print" ></p>
+
+	<script>
+	function Print() {
+	  var x = document.getElementById("myText").value;
+	  document.getElementById("demo").innerHTML = x;
+	}
+    </script>
+
+</body>
+</html>
